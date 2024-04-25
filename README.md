@@ -1,6 +1,8 @@
 # DataframeTools
 
-**TODO: Add description**
+This is really just a set of functions to help with the manipulation of dataframes.  
+
+If I find some useful, I'm likely to republish them as independent packages.
 
 ## Installation
 
