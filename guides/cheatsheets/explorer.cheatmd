@@ -1,4 +1,4 @@
-# Explorer
+# Explorer Cheatsheet!
 
 This is really a set of tips for Explorer.DataFrame because I find it was hard for newcomers to elixir.
 
@@ -23,6 +23,8 @@ on a dataframe.  It also means you can write `DF.<function>` rather than `Explor
 ```elixir
 DF.dtypes(df)
 ```
+
+#### 
 
 ### Conversion
 {: .col-1}
