@@ -4,7 +4,8 @@ This is really just a set of functions to help with the manipulation of datafram
 
 If I find some useful, I'm likely to republish them as independent packages.
 
-Right now the only function of interest is [DataframeTools.Date.convert_column_to_date](https://hexdocs.pm/dataframe_tools/DataframeTools.Date.html#convert_column_to_date/2)
+Right now the only functions of interest is [DataframeTools.Date.convert_column_to_date](https://hexdocs.pm/dataframe_tools/DataframeTools.Date.html#convert_column_to_date/2)
+and [DataframeTools.String.categorise_columns]
 
 ## Installation
 
