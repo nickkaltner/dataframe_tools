@@ -11,7 +11,8 @@ defmodule DataframeTools.MixProject do
       description: description(),
       package: package(),
       name: "Dataframe Tools",
-      source_url: "https://github.com/nickkaltner/dataframe_tools"
+      source_url: "https://github.com/nickkaltner/dataframe_tools",
+      docs: docs()
     ]
   end
 
@@ -46,6 +47,19 @@ defmodule DataframeTools.MixProject do
                 ),
       licenses: ["Apache-2.0"],
       links: %{"GitHub" => "https://github.com/elixir-ecto/postgrex"}
+    ]
+  end
+
+  defp docs() do
+    [
+      extra_section: "GUIDES",
+      extras: extras()
+    ]
+  end
+
+  defp extras() do
+    [
+      "guides/cheatsheets/explorer.cheatmd"
     ]
   end
 end

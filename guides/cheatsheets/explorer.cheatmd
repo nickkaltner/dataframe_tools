@@ -1,0 +1,57 @@
+# Explorer
+
+This is really a set of tips for Explorer.DataFrame because I find it was hard for newcomers to elixir.
+
+## Manipulating Dataframes
+{: .col-1}
+
+### Starting
+
+#### Before you start, including macro support
+
+```elixir
+require Explorer.DataFrame, as: DF
+```
+
+This allows queries to be more simple, referencing columns (a series in explorer) directly, rather than using [] 
+on a dataframe.  It also means you can write `DF.<function>` rather than `Explorer.DataFrame.<function>`.
+
+### Analysis
+
+#### Checking the types of columns
+
+```elixir
+DF.dtypes(df)
+```
+
+### Conversion
+{: .col-1}
+
+#### Fixing the weird syntax
+
+```elixir
+DF.mutate_with(df, &[c: Explorer.Series.add(&1["a"], &1["b"])])
+
+# is just another way to say
+
+DF.mutate_with(df, fn lazy_df -> 
+  %{
+    c: Explorer.Series.add(lazy_df["a"], lazy_df["b"])
+  }
+end)
+```
+
+
+
+#### Converting a column from string to category
+
+```elixir
+DF.mutate(df, %{col_name => Explorer.Series.cast(df[col_name], :category)})
+```
+
+#### Converting a column from string to a datetime
+
+```elixir
+DF.mutate(df, %{col_name => Explorer.Series.strptime(df[column_name], "%+")})
+```
+
